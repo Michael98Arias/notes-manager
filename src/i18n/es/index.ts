@@ -57,7 +57,32 @@ export default {
           errorSignout: 'No se pudo cerrar sesión. Por favor, intente nuevamente.',
         },
       },
-      notesDashboard: {},
+      notesDashboard: {
+        titles: {
+          notes: 'Notas',
+          createNote: 'Crear Nota',
+          editNote: 'Editar Nota',
+          deleteNote: 'Eliminar Nota',
+        },
+        buttons: {
+          seeMore: 'Ver Más',
+          delete: 'Eliminar',
+          accept: 'Aceptar',
+          cancel: 'Cancelar',
+        },
+        messages: {
+          noNotes: 'Actualmente no tienes ninguna nota activa.',
+          errorNotes: 'No se pudo actualizar el listado de notas. Por favor, intente nuevamente.',
+          errorNote: 'No se pudo visualizar la nota. Por favor, intente nuevamente.',
+          successCreate: 'Nota creada de manera exitosa',
+          errorCreate: 'No se pudo crear la nota. Por favor, intente nuevamente.',
+          successEdit: 'Nota actualizada de manera exitosa',
+          errorEdit: 'No se pudo actualizar la nota. Por favor, intente nuevamente.',
+          confirmationDelete: '¿Estás seguro de que quieres eliminar la nota?',
+          successDelete: 'Nota eliminada de manera exitosa',
+          errorDelete: 'No se pudo eliminar la nota. Por favor, intente nuevamente.',
+        },
+      },
     },
   },
 };

@@ -57,7 +57,32 @@ export default {
           errorSignout: 'Could not log out. Please try again.',
         },
       },
-      notesDashboard: {},
+      notesDashboard: {
+        titles: {
+          notes: 'Notes',
+          createNote: 'Create Note',
+          editNote: 'Edit Note',
+          deleteNote: 'Delete Note',
+        },
+        buttons: {
+          seeMore: 'See More',
+          delete: 'Delete',
+          accept: 'Accept',
+          cancel: 'Cancel',
+        },
+        messages: {
+          noNotes: "You don't have any active notes at the moment.",
+          errorNotes: 'Could not update the list of notes. Please try again.',
+          errorNote: 'Could not view the note. Please try again.',
+          successCreate: 'Note created successfully',
+          errorCreate: 'Could not create the note. Please try again.',
+          successEdit: 'Note updated successfully',
+          errorEdit: 'Could not update the note. Please try again.',
+          confirmationDelete: 'Are you sure you want to delete the note?',
+          successDelete: 'Note deleted successfully',
+          errorDelete: 'Could not delete the note. Please try again.',
+        },
+      },
     },
   },
 };
