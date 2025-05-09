@@ -1,0 +1,47 @@
+// Texts in the English language.
+
+export default {
+  error: {
+    notFound: 'Oops. Nothing here...',
+    withoutPermission: "Sorry, you don't have permissions.",
+    labelButton: 'Go Home',
+  },
+  globalMessages: {
+    wait: 'Wait a moment please...',
+    successfulChange: '¡Updated with successful!',
+    successfulCreate: '¡Successfully created!',
+    errorApi: 'Something unexpected happened try again.',
+    errorNotFound: 'User not found.',
+    errorDisabled: 'Disabled user.',
+    confirm: 'Are you sure?',
+    delete: 'Will be eliminated: ',
+    errorFetchingData: 'Error fetching data.',
+  },
+  layout: {
+    mainLayout: {
+      loginPage: {
+        titles: {
+          main: 'Login',
+        },
+        form: {
+          email: 'Email',
+          password: 'Password',
+          emailPlaceholder: 'Enter your email',
+          passwordPlaceholder: 'Enter your password',
+        },
+        buttons: {
+          login: 'Login',
+          forgotPassword: 'Forgot your password?',
+          showPassword: 'Show Password',
+          hidePassword: 'Hide Password',
+        },
+        messages: {
+          successLogin: 'Login successful',
+          invalidLogin: 'Invalid credentials',
+          errorLogin: 'Login failed',
+        },
+      },
+      notesDashboard: {},
+    },
+  },
+};
