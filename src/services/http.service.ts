@@ -1,11 +1,10 @@
 import type { AxiosInstance, AxiosResponse, AxiosError, InternalAxiosRequestConfig } from 'axios';
-import axios from 'axios';
+import axios, { AxiosHeaders } from 'axios';
 import { HttpErrorFactory } from '../interfaces/http.interface';
 import { envBaseUrl } from '../shared/constants/Environment';
 
 class HttpService {
   private http: AxiosInstance;
-  private accessToken = '';
 
   constructor() {
     this.http = axios.create({
@@ -18,11 +17,21 @@ class HttpService {
     this.setupInterceptors(this.http);
   }
 
+  private getAccessToken(): string | null {
+    return localStorage.getItem('apiKey');
+  }
+
   private setupInterceptors(instance: AxiosInstance): void {
     instance.interceptors.request.use((request: InternalAxiosRequestConfig) => {
-      if (this.accessToken) {
-        request.headers.Authorization = `Bearer ${this.accessToken}`;
+      const accessToken = this.getAccessToken();
+
+      if (accessToken) {
+        request.headers = new AxiosHeaders(request.headers).set(
+          'Authorization',
+          `Bearer ${accessToken}`,
+        );
       }
+
       return request;
     });
 
@@ -37,10 +46,6 @@ class HttpService {
         return Promise.reject(rejectionError);
       },
     );
-  }
-
-  public setToken(token: string): void {
-    this.accessToken = token;
   }
 
   public async get<T>(url: string, config?: InternalAxiosRequestConfig): Promise<T> {
