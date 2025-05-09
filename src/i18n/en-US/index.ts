@@ -41,6 +41,22 @@ export default {
           errorLogin: 'Login failed',
         },
       },
+      profile: {
+        titles: {
+          profile: 'Profile',
+          name: 'Name',
+          email: 'Email',
+          verification: 'Verification',
+        },
+        buttons: {
+          logOut: 'Log Out',
+        },
+        messages: {
+          errorProfile: 'Failed to load profile. Please try again.',
+          successSignout: 'Session successfully closed',
+          errorSignout: 'Could not log out. Please try again.',
+        },
+      },
       notesDashboard: {},
     },
   },

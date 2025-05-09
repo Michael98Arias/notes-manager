@@ -41,6 +41,22 @@ export default {
           errorLogin: 'Error en el inicio de sesión',
         },
       },
+      profile: {
+        titles: {
+          profile: 'Perfil',
+          name: 'Nombre',
+          email: 'Correo',
+          verification: 'Verificación',
+        },
+        buttons: {
+          logOut: 'Cerrar sesión',
+        },
+        messages: {
+          errorProfile: 'No se pudo cargar el perfil. Por favor, intente nuevamente.',
+          successSignout: 'Sesión cerrada de manera exitosa',
+          errorSignout: 'No se pudo cerrar sesión. Por favor, intente nuevamente.',
+        },
+      },
       notesDashboard: {},
     },
   },
